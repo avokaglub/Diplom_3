@@ -6,9 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import PageObjects.MainPage;
 
-// https://github.com/bonigarcia/webdrivermanager
-// import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class CommonTest {
     protected static WebDriver driver;
 
@@ -17,7 +14,6 @@ public class CommonTest {
 
     @Before
     public void setUp() {
-        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(Config.MAIN_URI);
