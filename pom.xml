@@ -7,6 +7,14 @@
     <artifactId>Diplom_3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <!-- https://repo1.maven.org/maven2/org/slf4j/ -->
+        <repository>
+            <id>mylibid</id>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -28,6 +36,10 @@
         <allure.version>2.19.0</allure.version>
         <allure-maven.version>2.11.2</allure-maven.version>
         <allure-report.version>2.15.0</allure-report.version>
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <slf4j.version>2.0.3</slf4j.version>
     </properties>
 
     <dependencies>
@@ -66,6 +78,17 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
             <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
     <build>
