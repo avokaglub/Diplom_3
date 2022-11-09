@@ -30,7 +30,6 @@ public class UserLoginTest extends CommonTest {
                 .fillAndSendRegistrationForm("Name", randomEmail, "password")
                 .waitAuthFormToBeVisible()
                 .fillAndSendAuthForm(randomEmail, "password");
-        // После авторизации переход на главную страницу
     }
 
 }

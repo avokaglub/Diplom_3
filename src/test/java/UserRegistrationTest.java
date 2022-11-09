@@ -28,7 +28,6 @@ public class UserRegistrationTest extends CommonTest {
                 .fillAndSendRegistrationForm("Name", randomEmail, "password")
                 .waitAuthFormToBeVisible()
                 .fillAndSendAuthForm(randomEmail, "password");
-        // После авторизации переход на главную страницу
     }
 
     @Test
@@ -39,7 +38,6 @@ public class UserRegistrationTest extends CommonTest {
         this.mPage.openAccountForm()
                 .openRegistrationForm()
                 .fillAndSendRegistrationForm("Name", randomEmail, "pass");
-        //
         this.mPage.waitPasswordErrorMessageToBeVisible();
         Assert.assertTrue(this.mPage.userRegistrationForm.tPasswordErrorMessageIsDisplayed());
     }
