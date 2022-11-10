@@ -11,3 +11,6 @@ mvn clean test
 allure generate --clean .\target\allure-results -o .\target\allure-reports
 allure open .\target\allure-reports
 ```
+
+Для запуска тестов [chromedriver.exe](https://chromedriver.chromium.org/downloads) должен быть расположен в директории, указанной в переменной окружения PATH.
+Версия драйвера должна соответствовать версии браузера Google Chrome.
