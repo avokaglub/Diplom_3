@@ -1,5 +1,6 @@
 package PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,14 +24,17 @@ public class UserAuthForm {
         element.findElement(iLocator).sendKeys(value);
     }
 
+    @Step("Ввести адрес электронной почты: {value}")
     public void setEmailValue(String value){
         this.setValue(this.lEmailLocator, value);
     }
 
+    @Step("Ввести пароль: {value}")
     public void setPasswordValue(String value){
         this.setValue(this.lPasswordLocator, value);
     }
 
+    @Step("Кликнуть по кнопке 'Войти'")
     public void btnClick() {
         driver.findElement(bEnter).click();
     }

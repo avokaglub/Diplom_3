@@ -1,5 +1,6 @@
 import Constants.Config;
 import PageObjects.MainPage;
+import io.qameta.allure.Step;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,7 @@ public class CommonTest {
     final Logger logger = LoggerFactory.getLogger(CommonTest.class);
 
     @Before
+    @Step("Открыть главную страницу")
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -27,6 +29,7 @@ public class CommonTest {
     }
 
     @After
+    @Step("Закрыть браузер")
     public void tearDown() {
         driver.close();
         driver.quit();

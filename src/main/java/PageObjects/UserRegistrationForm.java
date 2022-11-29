@@ -1,5 +1,6 @@
 package PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,22 +28,27 @@ public class UserRegistrationForm {
         input.sendKeys(value);
     }
 
+    @Step("Ввести имя: {value}")
     public void setNameValue(String value){
         this.setValue(this.lNameLocator, value);
     }
 
+    @Step("Ввести адрес электронной почты: {value}")
     public void setEmailValue(String value){
         this.setValue(this.lEmailLocator, value);
     }
 
+    @Step("Ввести пароль: {value}")
     public void setPasswordValue(String value){
         this.setValue(this.lPasswordLocator, value);
     }
 
+    @Step("Кликнуть по кнопке 'Зарегистрироваться'")
     public void btnRegisterClick() {
         driver.findElement(bRegistration).click();
     }
 
+    @Step("Проверить отображается ли сообщение об ошибке у поля ввода пароля")
     public boolean tPasswordErrorMessageIsDisplayed() {
         return driver.findElement(tPasswordErrorMessage).isDisplayed();
     }

@@ -1,5 +1,6 @@
 package PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,16 +31,19 @@ public class MainPage {
         this.driver.findElement(eLocator).sendKeys(value);
     }
 
+    @Step("Открыть форму авторизации")
     public MainPage openAccountForm(){
         this.driver.findElement(accountLinkSelector).click();
         return this;
     }
 
+    @Step("Открыть форму регистрации")
     public MainPage openRegistrationForm(){
         this.driver.findElement(registrationLinkSelector).click();
         return this;
     }
 
+    @Step("Заполнить и отправить форму регистрации: {name}, {email}, {password}")
     public MainPage fillAndSendRegistrationForm(String name, String email, String password){
         this.userRegistrationForm.setNameValue(name);
         this.userRegistrationForm.setEmailValue(email);
@@ -55,16 +59,19 @@ public class MainPage {
         return this;
     }
 
+    @Step("Дождаться видимости формы авторизации")
     public MainPage waitAuthFormToBeVisible() {
         waitElementToBeVisible(userAuthFormSelector);
         return this;
     }
 
+    @Step("Дождаться появления сообщения об ошибке")
     public MainPage waitPasswordErrorMessageToBeVisible() {
         waitElementToBeVisible(userRegistrationForm.tPasswordErrorMessage);
         return this;
     }
 
+    @Step("Заполнить форму авторизации: {email}, {password}")
     public MainPage fillAndSendAuthForm(String email, String password){
         this.userAuthForm.setEmailValue(email);
         this.userAuthForm.setPasswordValue(password);
