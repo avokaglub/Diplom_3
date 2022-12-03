@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Passed tests",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": ["skipped"]
+  },
+  {
+    "name": "Problems",
+    "matchedStatuses": ["broken", "failed"]
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": ["broken"]
+  },
+  {
+    "name": "Product defects",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Test defects",
+    "matchedStatuses": ["broken"]
+  }
+]

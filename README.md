@@ -8,7 +8,11 @@ mvn clean test
 ```
 Для генерации и открытия отчета Allure выполнить команды
 ```
-allure generate --clean .\target\allure-results -o .\target\allure-reports
+Copy-Item ".\allure-results-props\categories.json" -Destination ".\target\allure-results"
+Copy-Item ".\allure-results-props\executor.json" -Destination ".\target\allure-results"
+Copy-Item ".\allure-results-props\environment.properties" -Destination ".\target\allure-results"
+Copy-Item ".\allure-results-props\yatest.feature" -Destination ".\target\allure-results"
+allure generate .\target\allure-results -o .\target\allure-reports
 allure open .\target\allure-reports
 ```
 
