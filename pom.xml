@@ -25,10 +25,10 @@
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-        <aspectj.version>1.9.9.1</aspectj.version>
+        <aspectj.version>1.9.19</aspectj.version>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <selenium.version>4.6.0</selenium.version>
+        <selenium.version>4.7.2</selenium.version>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <webdrivermanager.version>5.3.1</webdrivermanager.version>
@@ -41,7 +41,7 @@
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <slf4j.version>2.0.5</slf4j.version>
+        <slf4j.version>2.0.6</slf4j.version>
     </properties>
 
     <dependencies>
