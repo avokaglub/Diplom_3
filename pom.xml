@@ -15,19 +15,20 @@
         <junit.version>4.13.2</junit.version>
 
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
-        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.0.0</maven-surefire-plugin.version>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-        <aspectj.version>1.9.7</aspectj.version>
+        <aspectj.version>1.9.19</aspectj.version>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <selenium.version>4.5.0</selenium.version>
+        <selenium.version>4.8.3</selenium.version>
 
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <webdrivermanager.version>5.3.0</webdrivermanager.version>
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <webdrivermanager.version>5.3.2</webdrivermanager.version>
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
-        <allure.version>2.19.0</allure.version>
-        <allure-maven.version>2.11.2</allure-maven.version>
-        <allure-report.version>2.15.0</allure-report.version>
+        <allure.version>2.21.0</allure.version>
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+        <allure-maven.version>2.12.0</allure-maven.version>
+        <allure-report.version>2.20.1</allure-report.version>
     </properties>
 
     <dependencies>
@@ -108,9 +109,9 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.11.2</version>
+                <version>${allure-maven.version}</version>
                 <configuration>
-                    <reportVersion>2.15.0</reportVersion>
+                    <reportVersion>${allure-report.version}</reportVersion>
                 </configuration>
             </plugin>
         </plugins>
