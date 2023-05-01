@@ -7,6 +7,14 @@
     <artifactId>Diplom_3</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <repositories>
+        <!-- https://repo1.maven.org/maven2/org/slf4j/ -->
+        <repository>
+            <id>mylibid</id>
+            <url>file://${project.basedir}/lib</url>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -20,15 +28,15 @@
         <aspectj.version>1.9.19</aspectj.version>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <selenium.version>4.8.3</selenium.version>
+        <selenium.version>4.9.0</selenium.version>
 
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
-        <allure.version>2.21.0</allure.version>
+        <!-- https://github.com/allure-framework/allure-java -->
+        <allure.version>2.22.0</allure.version>
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
         <allure-maven.version>2.12.0</allure-maven.version>
-        <allure-report.version>2.20.1</allure-report.version>
+        <allure-report.version>2.22.0</allure-report.version>
     </properties>
 
     <dependencies>
